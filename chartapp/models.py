@@ -7,8 +7,8 @@ from django.db import models
 
 class Product(models.Model):
 
-    slug= models.SlugField()
-    id= models.CharField(max_length=120, primary_key=True)
+    slug = models.SlugField()
+    id = models.CharField(max_length=120, primary_key=True)
     price: float = models.FloatField()
     name: str = models.CharField(max_length=120)
 
