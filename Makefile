@@ -1,8 +1,8 @@
 run:
-    python manage.py runserver
+	python manage.py runserver 8000
 make-su:
-    python manage.py createsuperuser
+	python manage.py createsuperuser
 migrate:
-    python manage.py migrate
+	python manage.py migrate
 migrate-m:
-    python manage.py makemigrations
+	python manage.py makemigrations

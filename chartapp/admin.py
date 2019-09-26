@@ -1,5 +1,11 @@
 from django.contrib import admin
 
-from chartapp.models import Product
+from chartapp.models import Product, Contact
 
-admin.site.register(Product)# Register your models here.
+
+class ContactAdmin(admin.ModelAdmin):
+    fields = ["last_name", "first_name"]
+
+
+admin.site.register(Contact, ContactAdmin)
+admin.site.register(Product)

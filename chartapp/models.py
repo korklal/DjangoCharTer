@@ -1,9 +1,5 @@
-import uuid
-
 from django.db import models
 
-
-# Create your models here.
 
 class Product(models.Model):
     slug = models.SlugField()
@@ -13,10 +9,6 @@ class Product(models.Model):
 
     def __unicode__(self):
         return self.name
-
-
-from django.db import models
-
 
 class Contact(models.Model):
     first_name = models.CharField(
