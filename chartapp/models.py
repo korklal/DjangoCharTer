@@ -6,7 +6,6 @@ from django.db import models
 # Create your models here.
 
 class Product(models.Model):
-
     slug = models.SlugField()
     id = models.CharField(max_length=120, primary_key=True)
     price: float = models.FloatField()
@@ -15,15 +14,22 @@ class Product(models.Model):
     def __unicode__(self):
         return self.name
 
-#
-# class Selling():
-#
-#     def __init__(self, prodects_name):
-#         self.products_name=prodects_name
-#
-#         self.product_store: dict = [Product]
-#
-#     def count_seling(self, product, selling, summe_from_selling):
-#         self.product_store.append(product)
-#         self.selling: int = selling
-#         self.summe_from_selling: float = summe_from_selling
+
+from django.db import models
+
+
+class Contact(models.Model):
+    first_name = models.CharField(
+        max_length=255,
+    )
+    last_name = models.CharField(
+        max_length=255,
+    )
+
+    email = models.EmailField()
+
+    def __str__(self):
+        return '{}{}'.format(
+            self.first_name,
+            self.last_name,
+        )
